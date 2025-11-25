@@ -82,13 +82,13 @@ async function run() {
       res.send(result);
     });
 
-    // //events-details
-    // app.get("/events/:id", async (req, res) => {
-    //   const id = req.params.id;
-    //   const query = { _id: new ObjectId(id) };
-    //   const result = await eventsCollection.findOne(query);
-    //   res.send(result);
-    // });
+    //events-details
+    app.get("/events/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: new ObjectId(id) };
+      const result = await eventsCollection.findOne(query);
+      res.send(result);
+    });
 
 
     // // my-events sory by date
