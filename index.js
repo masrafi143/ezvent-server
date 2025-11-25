@@ -73,14 +73,14 @@ async function run() {
       res.send(result);
     });
 
-    // // All events APIs
-    // app.get("/events", async (req, res) => {
-    //   // const projectField = {title: 1, price_min:1, price_max:1, image:1};
-    //   // const cursor = productsCollection.find().sort({price_min : 1}).skip(2).limit(2).project(projectField);
-    //   const cursor = eventsCollection.find();
-    //   const result = await cursor.toArray();
-    //   res.send(result);
-    // });
+    // All events APIs
+    app.get("/events", async (req, res) => {
+      // const projectField = {title: 1, price_min:1, price_max:1, image:1};
+      // const cursor = productsCollection.find().sort({price_min : 1}).skip(2).limit(2).project(projectField);
+      const cursor = eventsCollection.find();
+      const result = await cursor.toArray();
+      res.send(result);
+    });
 
     // //events-details
     // app.get("/events/:id", async (req, res) => {
