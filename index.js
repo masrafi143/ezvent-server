@@ -91,18 +91,18 @@ async function run() {
     });
 
 
-    // // my-events sory by date
-    // app.get("/events-date-sorted", async (req, res) => {
-    //   const email = req.query.email;
-    //   console.log("Fetching events for:", email);
-    //   const query = {};
-    //   if (email) {
-    //     query.user_email = email;
-    //   }
-    //   const cursor = eventsCollection.find(query).sort({ date: -1 });
-    //   const result = await cursor.toArray();
-    //   res.send(result);
-    // });
+    // my-events sory by date
+    app.get("/events-date-sorted", async (req, res) => {
+      const email = req.query.email;
+      console.log("Fetching events for:", email);
+      const query = {};
+      if (email) {
+        query.user_email = email;
+      }
+      const cursor = eventsCollection.find(query).sort({ date: -1 });
+      const result = await cursor.toArray();
+      res.send(result);
+    });
 
     // add-events
     app.post("/events", async (req, res) => {
